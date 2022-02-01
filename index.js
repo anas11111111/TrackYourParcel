@@ -35,7 +35,7 @@ app.post('/', (req, res) => {
     });
 })
 app.listen(port, () => {
-    console.log("listening to port no" + port)
+    console.log("listening to port no:" + port)
 })
 log(models);
 //Doing up and running express server
