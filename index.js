@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 });
 app.post('/', (req, res) => {
     const body = req.body;
-    const user = new models.User({ username: body.username, createAt: new Date() });
+    const user = new models.User({ username: body.username, createAt: new Date() } );
     user.save().then((savedUser) => {
         res.status(201).send('User saved.Id' + savedUser._id);
     }).catch((error) => {
