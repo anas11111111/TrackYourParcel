@@ -21,8 +21,13 @@
   "dependencies": {
     "esm": "^3.2.25",
     "express": "^4.17.2",
+    "express-winston": "^4.2.0",
     "joi": "^17.6.0",
     "mongoose": "^6.1.9",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "winston": "^3.5.1",
+    "winston-daily-rotate-file": "^4.6.0",
+    "winston-elasticsearch": "^0.16.1",
+    "winston-mongodb": "^5.0.7"
   }
 }
