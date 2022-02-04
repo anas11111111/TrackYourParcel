@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
-const uri = "mongodb://localhost:27017/trackyourparcel";
+export const uri = "mongodb://localhost:27017/trackyourparcel";
 const options = {};
 
 const log = (msg) => console.log(msg);
 
-const connectWithDb = () => {
+export const connectWithDb = () => {
     mongoose.connect(uri, options, (err, db) => {
         if (err) {
             console.error(err)
@@ -15,4 +15,3 @@ const connectWithDb = () => {
         }
     })
 }
-export default connectWithDb;

@@ -4,7 +4,7 @@ const schema = Joi.object().keys({
 });
 export const validate = (data) => {
     const result = schema.validate(data);
-    data.createdAt = new Date();
+    data.createAt = new Date();
     result.value = data;
     return result;
 

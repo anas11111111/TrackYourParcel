@@ -1,7 +1,7 @@
 import express from "express";
 import configure from "./controllers/index";
 import { handleErrors } from "./middlewares/handleErrors";
-import connectWithDb from "./mongo";
+import { connectWithDb, uri } from "./mongo";
 import winston from "winston";
 import expressWinston from "express-winston";
 import winstonFile from "winston-daily-rotate-file";
@@ -33,13 +33,19 @@ const getMessage = (req, res) => {
 
 const fileInfoTransport = new (winston.transports.DailyRotateFile)({
     filename: 'log-info-%DATE%.log',
-    datePattern:'yyyy-MM-DD-HH'
-}) 
-
+    datePattern: 'yyyy-MM-DD-HH'
+})
+const elasticsearchOptions = {
+    level: 'info',
+    clientOpts: { node: 'http://localhost:9200' },
+    indexPrefix: 'log-trackyourparcel',
+};
+const esTransport = new (ElasticsearchTransport)(elasticsearchOptions);
 const infoLogger = expressWinston.logger({
     transports: [
         new winston.transports.Console(),
-        fileInfoTransport
+        fileInfoTransport,
+        esTransport
     ],
     format: winston.format.combine(winston.format.colorize(), winston.format.json()),
     meta: true,
@@ -49,17 +55,28 @@ const infoLogger = expressWinston.logger({
 
 const fileErrorTransport = new (winston.transports.DailyRotateFile)({
     filename: 'error-info-%DATE%.log',
-    datePattern:'yyyy-MM-DD-HH'
-}) 
+    datePattern: 'yyyy-MM-DD-HH'
+});
+
+const mongoErrorTransport = new winston.transports.MongoDB({
+    db: uri,
+    metaKey: 'meta',
+})
 
 const errorLogger = expressWinston.errorLogger({
     transports: [
         new winston.transports.Console(),
-        fileErrorTransport
+        fileErrorTransport, mongoErrorTransport,esTransport,
+        
     ],
-    
+    format: winston.format.combine(winston.format.colorize(), winston.format.json()),
+    meta: true,
+    msg:'{"correlationalId":"{{req.headers.x-correlation-id}}","error":"{{err.message}}"}'
 
-})
+
+});
+
+
 app.use(infoLogger);
 
 configure(app);
