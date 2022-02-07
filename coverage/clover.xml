@@ -1,111 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644176283182" clover="3.2.0">
-  <project timestamp="1644176283182" name="All files">
-    <metrics statements="133" coveredstatements="52" conditionals="18" coveredconditionals="2" methods="29" coveredmethods="6" elements="180" coveredelements="60" complexity="0" loc="133" ncloc="133" packages="7" files="12" classes="12"/>
+<coverage generated="1644229884484" clover="3.2.0">
+  <project timestamp="1644229884484" name="All files">
+    <metrics statements="78" coveredstatements="35" conditionals="6" coveredconditionals="1" methods="18" coveredmethods="5" elements="102" coveredelements="41" complexity="0" loc="78" ncloc="78" packages="5" files="7" classes="7"/>
     <package name="src">
-      <metrics statements="31" coveredstatements="25" conditionals="6" coveredconditionals="2" methods="7" coveredmethods="3"/>
-      <file name="app.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\app.js">
-        <metrics statements="14" coveredstatements="12" conditionals="4" coveredconditionals="2" methods="0" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="24" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-      </file>
-      <file name="logger.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\logger.js">
-        <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-      </file>
-      <file name="mongo.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\mongo.js">
-        <metrics statements="7" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="11" count="0" type="stmt"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="app.js" path="C:\Users\Anas\Downloads\TrackYourParcel\TrackYourParcel\src\app.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="33" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
-      <file name="index.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\controllers\index.js">
+      <metrics statements="33" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+      <file name="index.js" path="C:\Users\Anas\Downloads\TrackYourParcel\TrackYourParcel\src\controllers\index.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
       </file>
-      <file name="userController.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\controllers\userController.js">
-        <metrics statements="31" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+      <file name="userController.js" path="C:\Users\Anas\Downloads\TrackYourParcel\TrackYourParcel\src\controllers\userController.js">
+        <metrics statements="31" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
         <line num="49" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
-        <line num="62" count="1" type="stmt"/>
-        <line num="63" count="1" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="66" count="1" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="65" count="2" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="23" coveredstatements="4" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="1"/>
-      <file name="index.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\middlewares\index.js">
-        <metrics statements="23" coveredstatements="4" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
+      <metrics statements="23" coveredstatements="10" conditionals="6" coveredconditionals="1" methods="5" coveredmethods="2"/>
+      <file name="index.js" path="C:\Users\Anas\Downloads\TrackYourParcel\TrackYourParcel\src\middlewares\index.js">
+        <metrics statements="23" coveredstatements="10" conditionals="6" coveredconditionals="1" methods="5" coveredmethods="2"/>
+        <line num="3" count="2" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="6" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
         <line num="29" count="0" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
         <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -116,70 +85,25 @@
         <line num="37" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.models">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\models\index.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="1" type="stmt"/>
-      </file>
-      <file name="user.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\models\user.js">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-      </file>
-    </package>
     <package name="src.models.view-models">
       <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\models\view-models\index.js">
+      <file name="index.js" path="C:\Users\Anas\Downloads\TrackYourParcel\TrackYourParcel\src\models\view-models\index.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
       </file>
-      <file name="user-view-model.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\models\view-models\user-view-model.js">
+      <file name="user-view-model.js" path="C:\Users\Anas\Downloads\TrackYourParcel\TrackYourParcel\src\models\view-models\user-view-model.js">
         <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.services">
-      <metrics statements="27" coveredstatements="4" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="userService.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\services\userService.js">
-        <metrics statements="27" coveredstatements="4" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-      </file>
-    </package>
     <package name="src.utils">
       <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="errors.js" path="C:\Users\Anas\Downloads\trackYourParcel\TrackYourParcel\src\utils\errors.js">
+      <file name="errors.js" path="C:\Users\Anas\Downloads\TrackYourParcel\TrackYourParcel\src\utils\errors.js">
         <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="3" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>

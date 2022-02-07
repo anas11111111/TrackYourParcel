@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">76.92% </span>
+                <span class="strong">54.54% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/13</span>
+                <span class='fraction'>6/11</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/10</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
@@ -120,10 +120,7 @@
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -141,35 +138,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -186,7 +182,6 @@ import expressWinston from "express-winston";
 import winstonFile from "winston-daily-rotate-file";
 import winstonMongo from "winston-mongodb";
 import { ElasticsearchTransport } from "winston-elasticsearch";
-import { uri } from "./mongo";
 &nbsp;
 const getMessage = <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
     let obj = <span class="cstat-no" title="statement not covered" >{</span>
@@ -196,20 +191,20 @@ const getMessage = <span class="fstat-no" title="function not covered" >(r</span
 <span class="cstat-no" title="statement not covered" >    return JSON.stringify(obj);</span>
 }
 &nbsp;
-const fileInfoTransport = new (winston.transports.DailyRotateFile)({
-    filename: 'log-info-%DATE%.log',
-    datePattern: 'yyyy-MM-DD-HH'
-})
 const elasticsearchOptions = {
     level: 'info',
     clientOpts: { node: 'http://localhost:9200' },
     indexPrefix: 'log-trackyourparcel',
 };
 const esTransport = new (ElasticsearchTransport)(elasticsearchOptions);
-export const infoLogger =<span class="fstat-no" title="function not covered" >(u</span>ri)=&gt; <span class="cstat-no" title="statement not covered" >expressWinston.logger({</span>
+&nbsp;
+export const infoLogger =<span class="fstat-no" title="function not covered" >()</span>=&gt; <span class="cstat-no" title="statement not covered" >expressWinston.logger({</span>
     transports: [
         new winston.transports.Console(),
-        fileInfoTransport,
+        new (winston.transports.DailyRotateFile)({
+            filename: 'log-info-%DATE%.log',
+            datePattern: 'yyyy-MM-DD-HH'
+        }),
         esTransport
     ],
     format: winston.format.combine(winston.format.colorize(), winston.format.json()),
@@ -218,20 +213,19 @@ export const infoLogger =<span class="fstat-no" title="function not covered" >(u
     msg: getMessage
 });
 &nbsp;
-const fileErrorTransport = new (winston.transports.DailyRotateFile)({
-    filename: 'error-info-%DATE%.log',
-    datePattern: 'yyyy-MM-DD-HH'
-});
 &nbsp;
-const mongoErrorTransport = (uri)=&gt;new winston.transports.MongoDB({
+const mongoErrorTransport = <span class="fstat-no" title="function not covered" >(u</span>ri) =&gt; <span class="cstat-no" title="statement not covered" >new winston.transports.MongoDB({</span>
     db: uri,
     metaKey: 'meta',
 })
 &nbsp;
-export const errorLogger =(uri) =&gt; expressWinston.errorLogger({
+export const errorLogger = <span class="fstat-no" title="function not covered" >(u</span>ri) =&gt; <span class="cstat-no" title="statement not covered" >expressWinston.errorLogger({</span>
     transports: [
         new winston.transports.Console(),
-        fileErrorTransport, mongoErrorTransport(uri), esTransport,
+        new (winston.transports.DailyRotateFile)({
+            filename: 'error-info-%DATE%.log',
+            datePattern: 'yyyy-MM-DD-HH'
+        }), mongoErrorTransport(uri), esTransport,
 &nbsp;
     ],
     format: winston.format.combine(winston.format.colorize(), winston.format.json()),
@@ -247,7 +241,7 @@ export const errorLogger =(uri) =&gt; expressWinston.errorLogger({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Feb 07 2022 01:38:03 GMT+0600 (Bangladesh Standard Time)
+                at Mon Feb 07 2022 11:55:12 GMT+0600 (Bangladesh Standard Time)
             </div>
         <script src="../prettify.js"></script>
         <script>

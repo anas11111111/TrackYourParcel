@@ -5,7 +5,7 @@ import {handleValidation as handleValidation} from "../middlewares/index";
 
 const router = express.Router()
 const getHandler = async (req, res, next) => {
-    console.log('getHandler');
+
     try {
         const users = await getAllUsers();
         res.status(200).send(users);
@@ -63,7 +63,7 @@ router.put('/', putHandler);
 router.delete('/:id', deleteHandler);
 
 const configure = (app) => {
-    console.log('config2')
-    app.use('/users', router);
+
+     app.use('/users', router);
 }
 export default configure;
