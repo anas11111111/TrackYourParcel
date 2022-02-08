@@ -1,7 +1,7 @@
 import express from "express";
-import { saveUser, getAllUsers, update, deleteById } from "../services/userService";
+import { saveUser, getAllUsers, update, deleteById,getUserById } from "../services/userService";
 import { validators } from "../models/view-models";
-import {handleValidation as handleValidation} from "../middlewares/index";
+import { handleValidation as handleValidation } from "../middlewares/index";
 
 const router = express.Router()
 const getHandler = async (req, res, next) => {
@@ -16,14 +16,29 @@ const getHandler = async (req, res, next) => {
     }
 
 }
+
+const getIdByHandler = async (req, res, next) => {
+
+    try {
+        const id = req.params.id;
+        const user = await getUserById(id);
+        res.status(200).send(user);
+    }
+    catch {
+        return next(error, req, res);
+
+    }
+
+}
+
 const postHandler = async (req, res, next) => {
     try {
         const body = req.body;
         const user = await saveUser(body);
         res.status(201).send(user._id);
     }
-    catch(error) {
-        console.log(error,req,res)
+    catch (error) {
+        console.log(error, req, res)
 
         return next(error, req, res);
 
@@ -37,7 +52,7 @@ const putHandler = async (req, res, next) => {
         const user = await update(body);
         res.status(200).send(user._id);
     }
-    catch(error) {
+    catch (error) {
         return next(error, req, res);
 
     }
@@ -58,12 +73,14 @@ const deleteHandler = async (req, res, next) => {
 }
 
 router.get('/', getHandler);
-router.post('/',handleValidation(validators.userSchemaValidate), postHandler);
+router.get('/:id', getIdByHandler);
+router.post('/', handleValidation(validators.userSchemaValidate), postHandler);
 router.put('/', putHandler);
 router.delete('/:id', deleteHandler);
 
+
 const configure = (app) => {
 
-     app.use('/users', router);
+    app.use('/users', router);
 }
 export default configure;

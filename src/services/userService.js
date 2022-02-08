@@ -42,6 +42,11 @@ export const deleteById = async (id) => {
 
     }
 
+}
+export const getUserById = async (id) => {
 
+    const User = models.User;
+    let model = await User.findById(id);
+    return model;
 
 }
