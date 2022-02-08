@@ -32,18 +32,27 @@ describe('UserController Test Suite', () => {
         console.log("user", user);
         expect(user.id).toBe('1');
     });
-    test.only('put should update an existing user', async () => {
-        let user = 
-            {
-                id: '1',
-                username: 'user001'
-            };
+    test('put should update an existing user', async () => {
+        let user =
+        {
+            id: '1',
+            username: 'user001'
+        };
         let response = await request(app).put('/users').send(user);
         expect(response.statusCode).toBe(200);
-        let updatedUserResponse = await request(app).put('/users/1');
+        let updatedUserResponse = await request(app).get('/users/1');
         let updatedUser = updatedUserResponse.body;
         expect(updatedUser.username).toBe(user.username);
-        
+
     });
 
+    test.only('delete by id should return a success message', async () => {
+        let response = await request(app).delete('/users/1');
+        expect(response.statusCode).toBe(200);
+        let deletedUserResponse = await request (app).get('/users/1');
+        expect(deletedUserResponse.statusCode).toBe(404);
+        let deletedUser = deletedUserResponse.body;
+        expect(deletedUser.message).toBe('user not found by the id 1');
+
+    });
 });

@@ -1,7 +1,8 @@
 import express from "express";
-import { saveUser, getAllUsers, update, deleteById,getUserById } from "../services/userService";
+import { saveUser, getAllUsers, update, deleteById, getUserById } from "../services/userService";
 import { validators } from "../models/view-models";
 import { handleValidation as handleValidation } from "../middlewares/index";
+import { NotFound } from "../utils/errors";
 
 const router = express.Router()
 const getHandler = async (req, res, next) => {
@@ -22,9 +23,16 @@ const getIdByHandler = async (req, res, next) => {
     try {
         const id = req.params.id;
         const user = await getUserById(id);
-        res.status(200).send(user);
+        if (user) {
+            res.status(200).send(user);
+
+        }
+        else {
+            throw new NotFound('user not found by the id ' + id);
+        }
+
     }
-    catch {
+    catch(error) {
         return next(error, req, res);
 
     }

@@ -18,16 +18,21 @@ export const saveUser = async (user) => {
 };
 
 export const getUserById = async (id) => {
-    
 
     let model = users.find(x => x.id === id);
+        return model;
+    
    
-    return model;
 
 }
 
 export const update = async (user) => {
     users[0].username = user.username;
     return users[0];
+}
+
+export const deleteById = async (id) => {
+    users = [];
+
 }
 
